@@ -1,0 +1,30 @@
+.container-grid {
+    margin-top: 50px
+}
+
+hr.separator {
+    border: 1px solid #cccccc;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+}
+
+.table-content {
+    margin-top: 30px;
+}
+
+.sinalize-label {
+    color: #589ca2;
+}
+
+table {
+    display:block;
+    height : 350px;
+    overflow-x : auto;
+}
+
+.table-users {
+    margin-bottom: 5%;
+}

@@ -1,0 +1,20 @@
+.navbar-styled {
+    background-color: #fff;
+    height: 90px;
+    vertical-align: middle;
+    z-index: 2;
+}
+
+.venturus-name {
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+.dropdown-item {
+    padding-top: 10px;
+}
+
+.dropdown-item:hover {
+    color: #3ac3a8;
+    background-color: #f3f3f3;
+}

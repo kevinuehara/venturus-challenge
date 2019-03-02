@@ -1,0 +1,17 @@
+.breadcrumb-item + .breadcrumb-item::before {
+  content: " > " !important;
+}
+
+.item-styled {
+  color: #2bc0a2;
+  text-decoration: none;
+}
+
+.item-styled:hover {
+  color: #2bc0a2;
+}
+
+.breadcrump-styled {
+  padding-left: 4%;
+  background-color: #f9f9f9 !important;
+}

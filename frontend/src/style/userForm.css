@@ -1,0 +1,34 @@
+.input-separator{
+    margin-right: 10%;
+}
+
+.checkbox-form-user {
+    margin-top: 4%;
+}
+
+.separate-button {
+    margin-right: 5%;
+}
+
+hr.separator {
+    border: 1px solid #cccccc;
+}
+
+h3.text-description {
+    color: #1abc9c;
+}
+
+.description-form-user {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-save-styled{
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+.btn-cancel-styled {
+    background-color: #e3e3e3;
+    color: #878787;
+}
