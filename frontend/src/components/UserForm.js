@@ -12,10 +12,6 @@ export default class UserForm extends Component {
         daysAdded: []
     }
 
-    constructor(props) {
-        super(props)
-    }
-
     handleSaveUser = () => {
         if (this.validateFormData()) {
             axios.post('http://localhost:8080/api/user', this.getFormData())
@@ -45,51 +41,53 @@ export default class UserForm extends Component {
         return data
     }
 
+    validateEmailRegex = (email) => {
+        var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return regex.test(email);
+    }
+
     validateFormData = () => {
         var isValid = true
 
         if (!this.refs.username.value) {
-            var element = document.getElementById("username")
+            let element = document.getElementById("username")
             element.classList.add("is-invalid")
             isValid = false
         } else {
-            var element = document.getElementById("username")
+            let element = document.getElementById("username")
             element.classList.remove("is-invalid")
         }
-
-        if (!this.refs.city.value) {
-            var element = document.getElementById("city")
-            element.classList.add("is-invalid")
-            isValid = false
-        } else {
-            var element = document.getElementById("city")
-            element.classList.remove("is-invalid")
-        }
-
 
         if (!this.refs.name.value) {
-            var element = document.getElementById("name")
+            let element = document.getElementById("name")
             element.classList.add("is-invalid")
             isValid = false
         } else {
-            var element = document.getElementById("name")
+            let element = document.getElementById("name")
             element.classList.remove("is-invalid")
         }
 
         if (!this.refs.email.value) {
-            var element = document.getElementById("email")
+            let element = document.getElementById("email")
             element.classList.add("is-invalid")
             isValid = false
         } else {
-            var element = document.getElementById("email")
-            element.classList.remove("is-invalid")
+
+            if (!this.validateEmailRegex(this.refs.email.value)) {
+                let element = document.getElementById("email")
+                element.classList.add("is-invalid")
+                isValid = false
+            } else {
+                let element = document.getElementById("email")
+                element.classList.remove("is-invalid")
+            }
         }
 
         if (!document.getElementById('checkAlways').checked
             && !document.getElementById('checkSometimes').checked
             && !document.getElementById('checkNever').checked) {
 
-            var element = document.getElementById("checkAlways")
+            let element = document.getElementById("checkAlways")
             element.classList.add("is-invalid")
 
             element = document.getElementById("checkSometimes")
@@ -100,7 +98,7 @@ export default class UserForm extends Component {
 
             isValid = false
         } else {
-            var element = document.getElementById("checkAlways")
+            let element = document.getElementById("checkAlways")
             element.classList.remove("is-invalid")
 
             element = document.getElementById("checkSometimes")
@@ -110,7 +108,7 @@ export default class UserForm extends Component {
             element.classList.remove("is-invalid")
         }
 
-        if (this.state.daysAdded.length == 0) {
+        if (this.state.daysAdded.length === 0) {
             this.state.days.forEach(day => {
                 var element = document.getElementById(`day-${day}`)
                 element.classList.add("is-invalid")
@@ -210,13 +208,15 @@ export default class UserForm extends Component {
                                 <div className="form-group input-separator">
                                     <label for="username">Username</label>
                                     <input type="username" className=":valid form-control input-form-user" id="username" ref="username" aria-describedby="usernameHelp" />
-                                    <small id="usernameHelp" className="form-text text-muted">Instructions to show on input focus</small>
                                 </div>
                             </div>
                             <div className="col">
                                 <div className="form-group input-separator">
                                     <label for="city">City</label>
                                     <input type="city" className="form-control input-form-user" id="city" ref="city" aria-describedby="cityHelp" />
+                                    <small id="citydHelpBlock" class="form-text text-muted">
+                                        Optional
+                                    </small>
                                 </div>
                             </div>
                         </div>
@@ -226,7 +226,6 @@ export default class UserForm extends Component {
                                 <div className="form-group input-separator">
                                     <label for="name">Name</label>
                                     <input type="name" className="form-control input-form-user" id="name" ref="name" aria-describedby="nameHelp" />
-                                    <small id="nameHelp" className="form-text text-muted">Instructions to show on input focus</small>
                                 </div>
                             </div>
                             <div className="col">
@@ -253,7 +252,6 @@ export default class UserForm extends Component {
                                 <div className="form-group input-separator">
                                     <label for="email">Email</label>
                                     <input type="email" className="form-control input-form-user" id="email" ref="email" aria-describedby="emailHelp" />
-                                    <small id="emailHelp" className="form-text text-muted">Instructions to show on input focus</small>
                                 </div>
                             </div>
                             <div className="col">

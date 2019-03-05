@@ -17,10 +17,6 @@ export default class GridContainer extends Component {
         userId: null
     }
 
-    constructor(props) {
-        super(props)
-    }
-
     componentDidMount() {
         axios.get('http://localhost:8080/api/user/1/user').then(res => {
             const users = res.data;
@@ -116,9 +112,9 @@ export default class GridContainer extends Component {
 
                                     var daysOfWeek = user.dayOfWeek.includes('Sat')
                                         && user.dayOfWeek.includes('Sun')
-                                        && user.dayOfWeek.length == 2 ? 'Weekends' : user.dayOfWeek.join(',')
+                                        && user.dayOfWeek.length === 2 ? 'Weekends' : user.dayOfWeek.join(',')
 
-                                    var daysOfWeek = user.dayOfWeek.length == 7 ? 'Everyday' : user.dayOfWeek.join(',')
+                                    daysOfWeek = user.dayOfWeek.length === 7 ? 'Everyday' : daysOfWeek
 
                                     return (<tr onMouseEnter={() => this.handleHoverTrash(true, idTrash)}
                                         onMouseLeave={() => this.handleHoverTrash(false, idTrash)} key={user._id}>
