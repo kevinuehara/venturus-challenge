@@ -4,6 +4,7 @@
  * Descrição: Arquivo responsável pelo roteamento com o mLab
  * Data: 27/02/2019
  */
+
 const express = require('express')
 const User = require('../models/User')
 
@@ -91,7 +92,23 @@ router.delete('/user/:id', async (req, res) => {
             if (err)
                 throw err
 
-            res.send({ success: true })
+            res.status(200).send({ success: true })
+        })
+    } catch (error) {
+        return res.status(400).send({
+            error: 'Failed deleting user'
+        })
+    }
+})
+
+router.put('/user/:id', async (req, res) => {
+    try {
+        let id = req.params.id
+        await User.findByIdAndUpdate(id, req.body, {new: true}, err => {
+            if (err)
+                throw err
+
+            res.status(200).send({ success: true })
         })
     } catch (error) {
         return res.status(400).send({
