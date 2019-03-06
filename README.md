@@ -76,6 +76,6 @@ Repositório para o desafio proposto pela Venturus para a vaga de FullStack.
   <li>Entrar na pasta da aplicação que encontra-se na pasta frontend</li>
   <li>O package.json irá se encontrar logo na pasta</li>
   <li>Executar o comando <b>npm install</b> para instalar todas as dependências</li>
-  <li>Executar o comando <b>npm start</b> para inicializar o server. Como default a porta está na 3000/li>
+  <li>Executar o comando <b>npm start</b> para inicializar o server. Como default a porta está na 3000</li>
   <li>Clique na URL acima para verificar se tudo está correto</li>
 </ul>
