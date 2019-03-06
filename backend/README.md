@@ -1,6 +1,4 @@
-# venturus-challenge BACKEND
-
-Repositório para o desafio proposto pela Venturus para a vaga de FullStack.
+# venturus-challenge backend module
 
 <h2>Backend</h2>
 

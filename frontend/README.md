@@ -1,4 +1,4 @@
-# venturus-challenge FRONTEND
+# venturus-challenge frontend module
 
 <h2>Frontend</h2>
 
