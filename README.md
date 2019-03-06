@@ -61,9 +61,9 @@ Repositório para o desafio proposto pela Venturus para a vaga de FullStack.
     </tbody>
 </table>
 
-<hr/> <br/>
+<hr/> 
 
-<h2>Frontend</h2> <hr/>
+<h2>Frontend</h2>
 
 <b>FrontEnd:</b> Foi utilizado o ReactJS, Bootstrap 4 e FontAwesome 5 para a construção da aplicação web, juntamente com as funcionalidades do ES6. Todas as regras de negócio envolvidas no projeto foram implementadas na camada client.
 
