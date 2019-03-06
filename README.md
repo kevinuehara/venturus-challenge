@@ -11,7 +11,7 @@ Repositório para o desafio proposto pela Venturus para a vaga de FullStack.
 
 <ul>
   <li>Entrar na pasta do backend</li>
-  <li>O package.json irá se encontrar logo na pasta raíz</li>
+  <li>O package.json irá se encontrar logo na pasta</li>
   <li>Executar o comando <b>npm install</b> para instalar todas as dependências, dentre elas: body-parser, express, dotenv, cors e mongoose</li>
   <li>Executar o comando <b>npm start</b> para inicializar o server. Como default a porta está na 8080, caso necessite mudar apenas troque no arquivo .env</li>
 </ul>
@@ -60,3 +60,22 @@ Repositório para o desafio proposto pela Venturus para a vaga de FullStack.
         </tr>
     </tbody>
 </table>
+
+<hr/> <br/>
+
+<h2>Frontend</h2> <hr/>
+
+<b>FrontEnd:</b> Foi utilizado o ReactJS, Bootstrap 4 e FontAwesome 5 para a construção da aplicação web, juntamente com as funcionalidades do ES6. Todas as regras de negócio envolvidas no projeto foram implementadas na camada client.
+
+- URL da aplicação WEB <a href="http://localhost:3000/">http://localhost:3000/</a>
+
+<h3>Instruções</h3>
+  <p>Requisitos: Estar com NodeJS e NPM instalado na máquina</p>
+
+<ul>
+  <li>Entrar na pasta da aplicação que encontra-se na pasta frontend</li>
+  <li>O package.json irá se encontrar logo na pasta</li>
+  <li>Executar o comando <b>npm install</b> para instalar todas as dependências</li>
+  <li>Executar o comando <b>npm start</b> para inicializar o server. Como default a porta está na 3000/li>
+  <li>Clique na URL acima para verificar se tudo está correto</li>
+</ul>
