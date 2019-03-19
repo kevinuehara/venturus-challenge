@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect(`mongodb://${process.env.USERNAME_MLAB}:${process.env.PASSWORD_MLAB}@ds163010.mlab.com:63010/venturus-challenge`, {
+mongoose.connect(`mongodb://${process.env.USERNAME_MLAB}:${process.env.PASSWORD_MLAB}@ds117846.mlab.com:17846/venturus-challenge`, {
     useNewUrlParser: true
 })
 
